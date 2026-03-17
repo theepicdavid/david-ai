@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI Chat</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <h1>AI Chat App</h1>
+    <div id="chat">
+        {% for user, ai in history %}
+            <p><b>You:</b> {{ user }}</p>
+            <p><b>AI:</b> {{ ai }}</p>
+            <hr>
+        {% endfor %}
+    </div>
+    <form action="/chat" method="post">
+        <input type="text" name="message" placeholder="Type your message" required>
+        <button type="submit">Send</button>
+    </form>
+</body>
+</html>
