@@ -3,3 +3,4 @@ uvicorn
 huggingface-hub
 jinja2
 python-multipart
+itsdangerous
